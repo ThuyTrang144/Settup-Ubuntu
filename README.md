@@ -2,7 +2,7 @@
 - New a virtual enviroment named "py3tifl"
 - Software: Git, Hipchat, Yakuake, Sublime text
 
-Setup:
-'''
+## Setup:
+```
 sudo make install
-'''
+```
