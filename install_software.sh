@@ -24,3 +24,6 @@ sudo apt-get install yakuake
 
 # Git: 
 sudo apt-get install git
+
+# Postgres:
+sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-commo
