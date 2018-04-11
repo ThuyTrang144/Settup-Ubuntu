@@ -2,11 +2,8 @@
 sudo apt-get install default-jre
 
 # Hipchat
-cd ~
-sudo sh -c 'echo "deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client $(lsb_release -c -s) main" > /etc/apt/sources.list.d/atlassian-hipchat4.list'
-wget -O - https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install hipchat4
+wget https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.0.1517-Linux.deb
+sudo dpkg -i HipChat4-4.0.1517-Linux.deb
 
 # VLC: play video
 sudo apt-get install vlc
@@ -25,5 +22,30 @@ sudo apt-get install yakuake
 # Git: 
 sudo apt-get install git
 
+
 # Postgres:
-sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-commo
+sudo apt-get install postgresql libpq-dev postgresql-client pgadmin3
+
+# Foxit reader
+cd ~/
+wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.1/en_us/FoxitReader2.1.0805_Server_x64_enu_Setup.run.tar.gz
+tar xzvf FoxitReader*.tar.gz
+sudo chmod a+x FoxitReader*.run
+sudo ./FoxitReader.*.run
+
+# Nodejs and npm
+sudo apt-get install nodejs
+
+# Tmux
+sudo apt-get install tmux
+
+# R and RStudio
+sudo apt-key adv –keyserver keyserver.ubuntu.com –recv-keys E084DAB9
+sudo add-apt-repository 'deb https://ftp.ussg.iu.edu/CRAN/bin/linux/ubuntu xenial/'
+sudo apt-get update
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+sudo apt-get install gdebi-core
+wget https://download1.rstudio.org/rstudio-1.0.44-amd64.deb
+sudo gdebi rstudio-1.0.44-amd64.deb
+rm rstudio-1.0.44-amd64.deb
